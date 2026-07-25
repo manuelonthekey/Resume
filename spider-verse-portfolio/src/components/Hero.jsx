@@ -16,12 +16,10 @@ const Hero = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
+        setIsVisible(entry.isIntersecting);
       });
     }, {
-      threshold: 0.2
+      threshold: 0.1
     });
 
     if (posterRef.current) {
@@ -36,7 +34,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" style={{ minHeight: '100vh', paddingTop: '100px', paddingBottom: '40px', position: 'relative' }}>
+    <section id="home" style={{ minHeight: '100vh', paddingTop: '40px', paddingBottom: '40px', position: 'relative' }}>
       
       {/* Global Section Heading */}
       <div style={{ textAlign: 'left', maxWidth: '1400px', margin: '0 auto 40px auto', padding: '0 20px' }}>
@@ -68,16 +66,15 @@ const Hero = () => {
             <div className="tail-right"></div>
           </div>
           <div className="bubble-group-right">
-            <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer" className="bubble bubble-small delay-3">
-              <span className="icon" style={{ marginRight: '6px' }}>{"{ }"}</span> LEETCODE
+            <a href="https://leetcode.com/u/manuelonthekey/" target="_blank" rel="noopener noreferrer" className="bubble bubble-small delay-3">LEETCODE
               <div className="tail-right"></div>
             </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="bubble bubble-small delay-4">
-              <span className="icon" style={{ marginRight: '6px' }}>💻</span> GITHUB
+            <a href="https://github.com/manuelonthekey" target="_blank" rel="noopener noreferrer" className="bubble bubble-small delay-4">
+              GITHUB
               <div className="tail-right"></div>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="bubble bubble-small delay-5">
-              <span className="icon" style={{ marginRight: '6px' }}>in</span> LINKEDIN
+            <a href="https://www.linkedin.com/in/manojit-maitra/" target="_blank" rel="noopener noreferrer" className="bubble bubble-small delay-5">
+              LINKEDIN
               <div className="tail-right"></div>
             </a>
           </div>

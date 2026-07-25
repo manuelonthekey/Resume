@@ -7,6 +7,7 @@ import Superpowers from './components/Superpowers';
 import Missions from './components/Missions';
 import Contact from './components/Contact';
 import QuoteCard from './components/ui/QuoteCard';
+import Timeline from './components/Timeline';
 
 function App() {
   
@@ -31,27 +32,29 @@ function App() {
       <main>
         <Hero />
         
-        <QuoteCard quote="Anyone can write code. The hard part is owning the bugs." author="THE DEVELOPER VIGILANTE" />
+        <QuoteCard quote="Anyone can write code. The hard part is owning the bugs." />
         
         <OriginStory />
         
-        <QuoteCard quote="My Spider-Sense? It usually activates five minutes before production crashes." author="THE DEVELOPER VIGILANTE" />
+        <QuoteCard quote="My MM-tingle? It usually activates five minutes before production crashes." />
         
         <InternshipArcs />
 
-        <QuoteCard quote="Heroes save cities. Developers save production." author="THE DEVELOPER VIGILANTE" />
+        <QuoteCard quote="Heroes save cities. Developers save production." />
+
+        <Timeline />
         
         <Superpowers />
 
-        <QuoteCard quote="The real villains aren't monsters. They're undocumented APIs." author="THE DEVELOPER VIGILANTE" />
+        <QuoteCard quote="The real villains aren't monsters. They're undocumented APIs." />
         
         <Missions />
         
-        <QuoteCard quote="Every deploy is a leap of faith." author="THE DEVELOPER VIGILANTE" />
+        <QuoteCard quote="Every deploy is a leap of faith." />
         
         <Contact />
 
-        <QuoteCard quote="With great power comes great responsibility." author="UNCLE BEN" />
+        <QuoteCard quote="With great power comes great responsibility."/>
       </main>
     </div>
   );

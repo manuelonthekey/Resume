@@ -1,55 +1,48 @@
 import React from 'react';
 import ComicPanel from './ui/ComicPanel';
 
-const arcs = [
-  { label: "Arc 01 — Learning the ropes", title: "The Rigzz Initiation", text: "Joined Rigzz Technologies. The codebase was massive, the stakes were high. First mission: understand the system architecture.", color: "var(--electric-cyan)" },
-  { label: "Arc 02 — Shipping features", title: "Client-Facing Deliverables", text: "Translated requirements into scalable solutions. Wrote code supporting live internal and client-facing systems. The rush of the first successful deployment!", color: "var(--glowing-green)" },
-  { label: "Arc 03 — Surviving production", title: "The Live Environment", text: "Collaborated with cross-functional teams to keep the engines running. Realized that maintaining effective communication is a superpower on its own.", color: "var(--comic-yellow)" },
-  { label: "Arc 04 — Debugging at 2 AM", title: "The Final Polish", text: "Late nights, caffeinated code reviews, and tracking down bugs before they hit prod. Demonstrated technical aptitude and took full ownership.", color: "var(--primary-red)" },
-];
-
 const InternshipArcs = () => {
   return (
-    <section id="internship" style={{ padding: '60px 20px', maxWidth: '1400px', margin: '0 auto', overflow: 'hidden' }}>
-      <h2 className="comic-title" style={{ textAlign: 'center', marginBottom: '20px' }}>ISSUE #002 — INTERNSHIP ARCS</h2>
-      <p style={{ textAlign: 'center', fontSize: '1.2rem', marginBottom: '40px', color: 'var(--primary-red)', fontFamily: 'var(--font-handwritten)' }}>
-        A Saga of Code, Coffee, and Cross-Functional Collaboration
-      </p>
+    <section id="internship" style={{ padding: '60px 20px', maxWidth: '1400px', margin: '0 auto' }}>
+      <h2 className="comic-title" style={{ textAlign: 'center', marginBottom: '40px' }}>
+        ISSUE #002 — FRIENDLY NEIGHBORHOOD DEVELOPER GOES CORPORATE
+      </h2>
 
-      {/* Horizontal Sequence Container */}
-      <div style={{ 
-        display: 'flex', 
-        gap: '30px', 
-        overflowX: 'auto', 
-        padding: '20px 10px',
-        scrollSnapType: 'x mandatory',
-        WebkitOverflowScrolling: 'touch'
-      }}>
-        {arcs.map((arc, index) => (
-          <div key={index} style={{ scrollSnapAlign: 'start', minWidth: '320px', flex: '0 0 auto' }}>
-            <ComicPanel 
-              dark={index % 2 !== 0} 
-              className={index % 2 === 0 ? 'shape-slant' : 'shape-trapezoid-2'}
-              style={{ height: '400px', display: 'flex', flexDirection: 'column', borderTop: `8px solid ${arc.color}` }}
-            >
-              <div style={{ background: 'var(--pitch-black)', color: 'var(--off-white)', padding: '5px 10px', fontFamily: 'var(--font-comic)', alignSelf: 'flex-start', transform: 'rotate(-3deg)' }}>
-                {arc.label}
-              </div>
-              <h3 style={{ fontSize: '2rem', marginTop: '20px', color: arc.color }}>{arc.title}</h3>
-              
-              <div style={{ flex: 1, position: 'relative', marginTop: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                 <div style={{ opacity: 0.5, fontFamily: 'var(--font-comic)', fontSize: '1.2rem', textAlign: 'center' }}>
-                   [Dossier / Visual Snapshot Placeholder]
-                 </div>
-              </div>
-
-              <div className="narration-box" style={{ marginTop: 'auto', background: 'var(--off-white)', color: 'var(--pitch-black)' }}>
-                {arc.text}
-              </div>
-            </ComicPanel>
+      <ComicPanel className="comic-parallelogram" style={{ display: 'flex', flexDirection: 'column', padding: '40px' }}>
+        <div>
+          {/* Header block for the job title */}
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', borderBottom: '4px solid var(--pitch-black)', paddingBottom: '15px', marginBottom: '20px' }}>
+            <div>
+              <h3 style={{ fontSize: '2.2rem', fontFamily: 'var(--font-comic)', color: 'var(--primary-red)', margin: 0, letterSpacing: '1px' }}>
+                Software Development Engineering (SDE) Intern
+              </h3>
+              <h4 style={{ fontSize: '1.4rem', fontFamily: 'var(--font-comic)', color: 'var(--deep-blue)', margin: '5px 0 0 0', letterSpacing: '1px' }}>
+                Rigzz Technologies — Kolkata, West Bengal
+              </h4>
+            </div>
+            <div style={{ background: 'var(--pitch-black)', color: 'var(--off-white)', padding: '8px 15px', fontFamily: 'var(--font-comic)', fontSize: '1.2rem', transform: 'rotate(2deg)', boxShadow: '4px 4px 0 var(--comic-yellow)' }}>
+              NOV 2025 – JAN 2026
+            </div>
           </div>
-        ))}
-      </div>
+
+          {/* Professional content bullet points */}
+          <div style={{ fontFamily: 'var(--font-tech)', fontSize: '1.15rem', lineHeight: '1.8', color: 'var(--pitch-black)' }}>
+            <ul style={{ paddingLeft: '20px', listStyleType: 'square' }}>
+              <li style={{ marginBottom: '12px' }}>
+              Contributed to production-level engineering systems under the direct mentorship of the Head of Engineering, ensuring robust code quality and architectural integrity:
+            </li>
+            </ul>
+            <ul style={{ paddingLeft: '20px', listStyleType: 'square' }}>
+              <li style={{ marginBottom: '12px' }}>
+                Developed and reviewed production-ready code supporting the build and deployment of client-facing and internal software systems.
+              </li>
+              <li>
+                Collaborated directly with cross-functional teams to translate system requirements into scalable, clean technical designs in a live engineering environment.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </ComicPanel>
     </section>
   );
 };

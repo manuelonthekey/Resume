@@ -1,66 +1,58 @@
 import React from 'react';
+import ComicPanel from './ui/ComicPanel';
 
 const OriginStory = () => {
   return (
     <section id="origin" style={{ padding: '60px 20px', maxWidth: '1400px', margin: '0 auto' }}>
+      <h2 className="comic-title" style={{ textAlign: 'center', marginBottom: '40px' }}>ISSUE #001 — THE ORIGIN STORY</h2>
       
-      <div 
-        className="comic-panel shape-broken" 
-        style={{ 
-          minHeight: '600px', 
-          background: 'linear-gradient(135deg, var(--pitch-black) 40%, var(--deep-blue) 100%)',
-          position: 'relative',
-          padding: '40px',
-          borderWidth: '8px'
-        }}
-      >
-        <div style={{ position: 'absolute', top: '-25px', left: '20px', background: 'var(--off-white)', color: 'var(--pitch-black)', padding: '5px 15px', fontFamily: 'var(--font-comic)', fontSize: '1.5rem', border: '4px solid var(--pitch-black)', transform: 'rotate(-2deg)' }}>
-          ISSUE #001 — THE ORIGIN OF A CODER
-        </div>
-
-        {/* Visual Background Placeholders */}
-        <div style={{ position: 'absolute', top: '10%', right: '10%', opacity: 0.2, fontFamily: 'var(--font-tech)', fontSize: '2rem', color: 'var(--glowing-green)' }}>
-          {`const hero = new Developer("Manojit");\nhero.init();\n// Debugging...`}
-        </div>
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '40px', // Increased gap to prevent offset hover borders from overlapping
+        padding: '0 20px'
+      }}>
         
-        <div style={{ position: 'absolute', bottom: '20%', left: '5%', background: 'var(--comic-yellow)', padding: '20px', transform: 'rotate(-10deg)', border: '2px solid black', fontFamily: 'var(--font-handwritten)', color: 'black', boxShadow: '4px 4px 0 rgba(0,0,0,0.3)' }}>
-          To-do:<br/>1. Survive University<br/>2. Build Web Apps<br/>3. Fix the 500 Error
-        </div>
+        {/* PANEL 1: EXECUTIVE PROFILE */}
+        <ComicPanel className="comic-parallelogram" style={{ display: 'flex', flexDirection: 'column', padding: '30px' }}>
+          <div> {/* Wrapper to apply internal counter-skew successfully */}
+            <div style={{ background: 'var(--pitch-black)', color: 'var(--off-white)', padding: '5px 10px', fontFamily: 'var(--font-comic)', alignSelf: 'flex-start', display: 'inline-block',fontSize:'150%' , transform: 'rotate(-2deg)' }}>
+              CHAPTER 1: THE EXECUTIVE PROFILE
+            </div>
+            <p style={{ marginTop: '20px', fontSize: '1.1rem', lineHeight: '1.6', fontFamily: 'var(--font-comic)', color: 'var(--pitch-black)' }}>
+              Computer Science undergraduate by day, full-stack developer by night—building across modern web technologies, backend systems, databases, and AI-powered applications. Experience ranges from shipping end-to-end products to surviving the occasional production bug, all while learning that great software is built one iteration at a time.
+            </p>
+          </div>
+        </ComicPanel>
 
-        {/* Center Visual Storytelling Placeholder */}
-        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', color: 'rgba(255,255,255,0.4)', fontFamily: 'var(--font-comic)', fontSize: '2rem' }}>
-          [Cinematic Blend: Laptop Screens, Web Motifs, University Life]
-        </div>
+        {/* PANEL 2: THE ACADEMY ARC */}
+        <ComicPanel dark={true} className="comic-parallelogram dark" style={{ display: 'flex', flexDirection: 'column', padding: '30px' }}>
+          <div>
+            <div style={{ background: 'var(--off-white)', color: 'var(--pitch-black)', padding: '5px 10px', fontFamily: 'var(--font-comic)', alignSelf: 'flex-start', display: 'inline-block',fontSize:'150%' , transform: 'rotate(2deg)' }}>
+              CHAPTER 2: THE ACADEMY ARC
+            </div>
+            <p style={{ marginTop: '20px', fontSize: '1.15rem', lineHeight: '1.8', fontFamily: 'var(--font-tech)', color: 'var(--off-white)' }}>
+              Currently pursuing a B.Tech in Computer Science and Engineering at <strong style={{ color: 'var(--comic-yellow)', fontFamily: 'var(--font-comic)', fontSize: '1.4rem', textShadow: '2px 2px 0px black', letterSpacing: '1px' }}>VIT Bhopal</strong>, maintaining a <strong style={{ color: 'var(--comic-yellow)', fontFamily: 'var(--font-comic)', fontSize: '1.4rem', textShadow: '2px 2px 0px black', letterSpacing: '1px' }}>CGPA of 8.26/10</strong>. Side quests include mastering <strong style={{ color: 'var(--electric-cyan)', borderBottom: '2px dashed var(--electric-cyan)' }}>Data Structures and Algorithms</strong>, navigating <strong style={{ color: 'var(--electric-cyan)', borderBottom: '2px dashed var(--electric-cyan)' }}>Database Management Systems</strong>, building for the <strong style={{ color: 'var(--electric-cyan)', borderBottom: '2px dashed var(--electric-cyan)' }}>web</strong> and <strong style={{ color: 'var(--electric-cyan)', borderBottom: '2px dashed var(--electric-cyan)' }}>Android</strong>, and exploring <strong style={{ color: 'var(--electric-cyan)', borderBottom: '2px dashed var(--electric-cyan)' }}>Technology Entrepreneurship</strong>—along with discovering that debugging at 2 A.M. counts as both education and character development.
+            </p>
+          </div>
+        </ComicPanel>
 
-        {/* Narration Boxes */}
-        <div className="narration-box" style={{ position: 'absolute', top: '15%', left: '10%', maxWidth: '300px' }}>
-          "Every hero has an origin."
-        </div>
-
-        <div className="narration-box" style={{ position: 'absolute', top: '45%', right: '10%', maxWidth: '350px', background: 'var(--off-white)' }}>
-          "Mine started with curiosity, code, and countless debugging sessions."
-        </div>
-
-        {/* Emphasis Text */}
-        <div className="narration-box" style={{ 
-          position: 'absolute', 
-          bottom: '10%', 
-          left: '50%', 
-          transform: 'translateX(-50%) scale(1.1)', 
-          background: 'var(--pitch-black)',
-          color: 'var(--off-white)',
-          textAlign: 'center',
-          maxWidth: '600px',
-          width: '90%',
-          border: '6px solid var(--primary-red)'
-        }}>
-          <span className="comic-highlight" style={{ fontSize: '3rem', display: 'block', lineHeight: '1.2' }}>
-            "With great code comes great technical debt."
-          </span>
-        </div>
+        {/* PANEL 3: ORIGIN STORY */}
+        <ComicPanel className="comic-parallelogram" style={{ display: 'flex', flexDirection: 'column', padding: '30px' }}>
+          <div>
+            <div style={{ background: 'var(--pitch-black)', color: 'var(--off-white)', padding: '5px 10px', fontFamily: 'var(--font-comic)', alignSelf: 'flex-start', display: 'inline-block',fontSize:'150%' , transform: 'rotate(-1deg)' }}>
+              CHAPTER 3: THE CALLING
+            </div>
+            <p style={{ marginTop: '20px', fontSize: '1.05rem', lineHeight: '1.5', fontFamily: 'var(--font-comic)', color: 'var(--pitch-black)', marginBottom: '20px' }}>
+              It started with a simple question: "How does a website actually work?" What began as casually inspecting web pages soon turned into an obsession with reshaping interfaces, experimenting with layouts, and realizing that code isn't just about changing appearances—it's about giving life to ideas.
+            </p>
+            <div className="narration-box" style={{ background: 'var(--comic-yellow)', color: 'var(--pitch-black)', border: '3px solid #000', marginTop: '10px' }}>
+              <strong>CURRENT MISSION:</strong> Seeking a full-time Software Development role to apply model and service deployment skills to production-scale problems—because with great code comes great technical debt. 😄
+            </div>
+          </div>
+        </ComicPanel>
 
       </div>
-
     </section>
   );
 };

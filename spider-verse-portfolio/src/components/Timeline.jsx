@@ -13,7 +13,7 @@ const timelineEvents = [
 const Timeline = () => {
   return (
     <section id="timeline" style={{ padding: '60px 20px', maxWidth: '1000px', margin: '0 auto', position: 'relative' }}>
-      <h2 className="comic-title" style={{ textAlign: 'center', marginBottom: '60px' }}>Across the Spider-Verse (Timeline)</h2>
+      <h2 className="comic-title" style={{ textAlign: 'center', marginBottom: '60px' }}>Earth 2005- TimeLine</h2>
       
       <div style={{ position: 'relative' }}>
         {/* Central Web Strand */}
