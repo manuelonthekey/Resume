@@ -1,5 +1,10 @@
-html {
+html, body {
   scroll-behavior: smooth;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'><defs><linearGradient id='b' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%23D62828'/><stop offset='100%' stop-color='%23007ACC'/></linearGradient></defs><path d='M3,3 L3,18 L9,14 L18,17 Z' fill='white' stroke='url(%23b)' stroke-width='3' stroke-linejoin='round' stroke-linecap='round'/></svg>") 2 2, auto !important;
+}
+
+a, button, [role="button"], .comic-btn, a *, button *, [onclick], input[type="submit"], input[type="button"], select {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'><defs><linearGradient id='b' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%23D62828'/><stop offset='100%' stop-color='%23007ACC'/></linearGradient></defs><path d='M9,2 C9,1 11,1 11,3 L11,9 L12,9 C13,9 14,10 14,11 L14,14 C14,16 12,18 10,18 L7,18 C5,18 4,16 4,14 L4,11 C4,10 5,9 6,9 L7,9 L7,4 C7,3 9,3 9,2 Z' fill='white' stroke='url(%23b)' stroke-width='3' stroke-linejoin='round' stroke-linecap='round'/></svg>") 9 2, pointer !important;
 }
 
 @media (max-width: 768px) {
